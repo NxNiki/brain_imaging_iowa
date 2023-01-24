@@ -6,7 +6,8 @@ set -e
 
 img_dir="/Shared/jianglab/3_Data_Working/CausalConnectome/rest"
 mask_dir="/Shared/jianglab/0_scripts/Xin/target_mask"
-output_dir="/Shared/jianglab/3_Data_Working/CausalConnectome/rest_output"
+#output_dir="/Shared/jianglab/3_Data_Working/CausalConnectome/rest_output"
+output_dir="/raid0/homes/xniu7/rest_output_conn"
 
 curr_dir=$(pwd)
 
@@ -15,7 +16,7 @@ mkdir -p $output_dir
 # ---------------------------------------------------
 
 #for img_4d in $(find $img_dir/*.rest - name 'normalized_func_data.nii.gz');
-for img_4d in `ls $img_dir/conn*HC*/results/preprocessing/3comp*.nii*`;
+for img_4d in `ls $img_dir/??HC????/conn_*HC*/results/preprocessing/3comp*.nii*`;
 do
 
   echo $img_4d
